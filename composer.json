@@ -1,13 +1,13 @@
 {
-    "name": "antwerpes/ap_docchecklogin",
-    "description": "Official DocCheck Login Extension for TYPO3 10.x.x",
+    "name": "antwerpes/ap-docchecklogin",
+    "description": "Official DocCheck Login Extension for TYPO3 9.5 and 10.4",
     "type": "typo3-cms-extension",
-    "version": "2.2.2",
     "autoload": {
         "psr-4": {
             "Antwerpes\\ApDocchecklogin\\": "Classes/"
         }
     },
     "require": {
+        "typo3/cms-felogin": "*"
     }
 }
