@@ -38,10 +38,11 @@ $EM_CONF[$_EXTKEY] = [
             'tgr_doccheck' => '',
         ],
         'depends' => [
-            'php'     => '7.1.0-7.3.0',
+            'php'     => '7.2.0-7.4.0',
             'typo3'   => '9.5.0-10.4.99',
-            'extbase' => '0.0.0-0.0.0',
-            'fluid'   => '0.0.0-0.0.0',
+            'extbase' => '*',
+            'fluid'   => '*',
+            'felogin' => '*'
         ],
         'suggests' => [],
     ],
