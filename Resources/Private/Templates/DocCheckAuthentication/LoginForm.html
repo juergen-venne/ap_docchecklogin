@@ -1,4 +1,5 @@
 <iframe
+	id="doccheck"
 	align="left"
 	scrolling="no"
 	frameborder="0"
@@ -21,6 +22,14 @@
 	class="dclogin dclogin-{settings.loginLayout}"
 	name="DCLogin"
 	title="DocCheck Login"
-	src="https://login.doccheck.com/code/{loginId}/{settings.language}/{templateKey}/{settings.params}">
+	data-src="https://login.doccheck.com/code/{loginId}/{settings.language}/{templateKey}/{settings.params}">
 	<a href="https://login.doccheck.com/code/{loginId}/{settings.language}/{templateKey}/{settings.params}">DocCheck Login</a>
 </iframe>
+<script>
+(function () {
+var docCheck = document.getElementById('doccheck');
+if (docCheck && docCheck.dataset.src) {
+  docCheck.src = docCheck.dataset.src + 'target=' + encodeURI(window.location.pathname).replaceAll('/', '|') + '/'; 
+}
+})();
+</script>
